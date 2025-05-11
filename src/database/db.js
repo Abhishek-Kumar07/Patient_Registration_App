@@ -1,19 +1,19 @@
-// src/db.js
-import { Pglite } from "pglite";
+// src/database/db.js
+import { PGlite } from '@electric-sql/pglite';
 
-// Initialize Pglite with persistent storage (IndexedDB)
-export const db = new Pglite("patient-reg-db");
+// ✅ Use IndexedDB URI for browser support
+export const db = new PGlite('idb://patient-reg-db');
 
-// Ensure the patient table exists
 export async function initDb() {
   await db.exec(`
     CREATE TABLE IF NOT EXISTS patients (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT NOT NULL,
-      age INTEGER,
-      gender TEXT,
-      dob TEXT,
-      contact TEXT
+      age INTEGER NOT NULL,
+      gender TEXT NOT NULL,
+      dob TEXT NOT NULL,
+      contact TEXT NOT NULL,
+      address TEXT NOT NULL
     );
   `);
 }

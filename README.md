@@ -1,12 +1,30 @@
-# React + Vite
+# 🏥 Patient Registration App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend-only app to register patients using in-browser database storage with Pglite. Built using Vite + React.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Register patients with name, age, gender, DOB, and contact
+- Validates inputs (age > 0, all fields required)
+- Stores data using Pglite (SQLite-compatible engine in the browser)
+- Persists data using IndexedDB
+- Modular form component
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Setup & Usage
+
+### Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/Abhishek-Kumar07/Patient_Registration_App
+cd patient-reg-app
+
+# Install dependencies
+npm install
+
+# Start the app
+npm run dev
