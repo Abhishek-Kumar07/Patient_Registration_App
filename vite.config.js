@@ -1,18 +1,3 @@
-// import { defineConfig } from 'vite'
-// import react from '@vitejs/plugin-react'
-
-// export default defineConfig({
-//   plugins: [react()],
-//   optimizeDeps: {
-//     exclude: ['@electric-sql/pglite'],
-//   },
-//   build: {
-//     rollupOptions: {
-//       external: ['@electric-sql/pglite']
-//     }
-//   }
-// })
-
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -23,7 +8,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: [], // make sure nothing is marked external, so it bundles everything
+      external: ['@electric-sql/pglite'], // make sure nothing is marked external, so it bundles everything
     },
   },
 })
