@@ -21,7 +21,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
-    include: ['@electric-sql/pglite'],
-  },
+    include: ['@electric-sql/pglite']
+  }
 })
 
