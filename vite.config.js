@@ -23,7 +23,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['@electric-sql/pglite'], // make sure nothing is marked external, so it bundles everything
+      external: [], // make sure nothing is marked external, so it bundles everything
     },
   },
 })
