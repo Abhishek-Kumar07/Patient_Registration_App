@@ -16,9 +16,12 @@ export async function initDb() {
         address TEXT NOT NULL
       );
     `);
+
+
     console.log('Database initialized and table created!');
   } catch (e) {
     console.error('Error initializing database:', e);
   }
 }
+
 
